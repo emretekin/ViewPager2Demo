@@ -30,16 +30,16 @@ class ActivityMain : AppCompatActivity() {
         //viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
     }
 
-    class BeerPagerAdapter(private val cheeseStrings: Array<String>) : RecyclerView.Adapter<BeerViewHolder>() {
+    class BeerPagerAdapter(private val beersStrings: Array<String>) : RecyclerView.Adapter<BeerViewHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeerViewHolder {
             return BeerViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_beer, parent, false))
         }
 
         override fun onBindViewHolder(holder: BeerViewHolder, position: Int) {
-            holder.beerName.text = cheeseStrings[position]
+            holder.beerName.text = beersStrings[position]
         }
 
-        override fun getItemCount() = cheeseStrings.size
+        override fun getItemCount() = beersStrings.size
     }
 
     class BeerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
